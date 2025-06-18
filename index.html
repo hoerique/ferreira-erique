@@ -1,603 +1,395 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Moderno</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script>tailwind.config={theme:{extend:{colors:{primary:'#4460AA',secondary:'#45A69D'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
-    <style>
-        :where([class^="ri-"])::before { content: "\f3c2"; }
-        body {
-            font-family: 'Open Sans', sans-serif;
-            color: #5C5D6D;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif;
-        }
-        .post-card:hover {
-            transform: translateY(-5px);
-        }
-        .newsletter-input:focus {
-            outline: none;
-            border-color: #4460AA;
-        }
-        .search-input:focus {
-            outline: none;
-            border-color: #4460AA;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | Dados & Programação</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#FF6B00',secondary:'#1E293B'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+}
+</style>
 </head>
-<body class="bg-[#F0F0F4]">
-    <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="#" class="text-3xl font-['Pacifico'] text-primary">logo</a>
-            
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="#" class="text-[#5C5D6D] hover:text-primary font-medium transition">Início</a>
-                <a href="#" class="text-[#5C5D6D] hover:text-primary font-medium transition">Artigos</a>
-                <a href="#" class="text-[#5C5D6D] hover:text-primary font-medium transition">Categorias</a>
-                <a href="#" class="text-[#5C5D6D] hover:text-primary font-medium transition">Sobre</a>
-                <a href="#" class="text-[#5C5D6D] hover:text-primary font-medium transition">Contato</a>
-            </nav>
-            
-            <div class="flex items-center space-x-4">
-                <div class="relative hidden md:block">
-                    <input type="text" placeholder="Pesquisar..." class="search-input pl-10 pr-4 py-2 rounded-full bg-[#F0F0F4] border-none text-sm">
-                    <div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-[#8C8C9C]">
-                        <i class="ri-search-line"></i>
-                    </div>
-                </div>
-                
-                <button class="bg-primary text-white px-4 py-2 rounded-button whitespace-nowrap hidden md:block">Entrar</button>
-                
-                <!-- Mobile Menu Button -->
-                <button class="md:hidden w-10 h-10 flex items-center justify-center text-[#5C5D6D]">
-                    <i class="ri-menu-line text-2xl"></i>
-                </button>
-            </div>
-        </div>
-    </header>
-    <!-- Hero Section -->
-    <section class="bg-white py-16 md:py-20">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
-                <div class="w-full md:w-1/2">
-                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#5C5D6D] mb-6">Bem-vindo ao nosso Blog de Conteúdo</h1>
-                    <p class="text-lg text-[#8C8C9C] mb-8">Explorando ideias, compartilhando conhecimento e inspirando novas perspectivas para o seu dia a dia.</p>
-                    <div class="flex flex-wrap gap-4">
-                        <button class="bg-primary hover:bg-opacity-90 text-white px-6 py-3 rounded-button whitespace-nowrap font-medium transition">Comece a Ler</button>
-                        <button class="bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-button whitespace-nowrap font-medium transition">Inscreva-se</button>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2">
-                    <img src="https://readdy.ai/api/search-image?query=modern%20minimalist%20blog%20workspace%20with%20laptop%2C%20coffee%20cup%2C%20notebook%2C%20and%20plants%20on%20a%20clean%20desk%2C%20soft%20natural%20lighting%2C%20blue%20and%20teal%20color%20accents%2C%20professional%20photography&width=600&height=400&seq=hero1&orientation=landscape" alt="Blog Hero" class="w-full h-auto rounded-lg shadow-lg object-cover object-top">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Posts -->
-    <section class="py-16 bg-[#F0F0F4]">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center mb-10">
-                <h2 class="text-2xl md:text-3xl font-bold text-[#5C5D6D]">Artigos em Destaque</h2>
-                <a href="#" class="text-primary hover:underline font-medium flex items-center">
-                    Ver todos
-                    <div class="w-5 h-5 ml-1 flex items-center justify-center">
-                        <i class="ri-arrow-right-line"></i>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Featured Post 1 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden post-card transition duration-300">
-                    <img src="https://readdy.ai/api/search-image?query=person%20writing%20in%20a%20journal%20with%20a%20laptop%20nearby%2C%20coffee%20cup%20on%20desk%2C%20modern%20workspace%20with%20blue%20and%20teal%20color%20accents%2C%20soft%20lighting&width=400&height=250&seq=post1&orientation=landscape" alt="Post Image" class="w-full h-48 object-cover object-top">
-                    <div class="p-6">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-[#E6E6EB] text-[#8C8C9C] text-xs px-3 py-1 rounded-full">Produtividade</span>
-                            <span class="text-[#8C8C9C] text-sm ml-auto">13 Jun, 2025</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-[#5C5D6D] mb-3">10 Dicas para Aumentar sua Produtividade Diária</h3>
-                        <p class="text-[#8C8C9C] mb-4 line-clamp-3">Descubra estratégias eficazes para organizar melhor o seu tempo e aumentar significativamente a sua produtividade no trabalho e na vida pessoal.</p>
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 rounded-full bg-[#E6E6EB] flex items-center justify-center">
-                                <i class="ri-user-line text-[#8C8C9C]"></i>
-                            </div>
-                            <div class="ml-3">
-                                <p class="font-medium text-[#5C5D6D]">Ricardo Oliveira</p>
-                                <p class="text-xs text-[#8C8C9C]">Editor Chefe</p>
-                            </div>
-                            <button class="ml-auto text-primary">
-                                <div class="w-8 h-8 flex items-center justify-center">
-                                    <i class="ri-bookmark-line"></i>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Featured Post 2 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden post-card transition duration-300">
-                    <img src="https://readdy.ai/api/search-image?query=healthy%20meal%20preparation%20with%20fresh%20vegetables%20and%20grains%2C%20modern%20kitchen%20with%20blue%20and%20teal%20accents%2C%20bright%20natural%20lighting&width=400&height=250&seq=post2&orientation=landscape" alt="Post Image" class="w-full h-48 object-cover object-top">
-                    <div class="p-6">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-[#E6E6EB] text-[#8C8C9C] text-xs px-3 py-1 rounded-full">Saúde</span>
-                            <span class="text-[#8C8C9C] text-sm ml-auto">10 Jun, 2025</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-[#5C5D6D] mb-3">Alimentação Saudável para uma Vida Equilibrada</h3>
-                        <p class="text-[#8C8C9C] mb-4 line-clamp-3">Aprenda como montar refeições nutritivas e saborosas que vão transformar sua saúde e bem-estar, com dicas práticas para o dia a dia.</p>
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 rounded-full bg-[#E6E6EB] flex items-center justify-center">
-                                <i class="ri-user-line text-[#8C8C9C]"></i>
-                            </div>
-                            <div class="ml-3">
-                                <p class="font-medium text-[#5C5D6D]">Mariana Santos</p>
-                                <p class="text-xs text-[#8C8C9C]">Nutricionista</p>
-                            </div>
-                            <button class="ml-auto text-primary">
-                                <div class="w-8 h-8 flex items-center justify-center">
-                                    <i class="ri-bookmark-line"></i>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Featured Post 3 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden post-card transition duration-300">
-                    <img src="https://readdy.ai/api/search-image?query=person%20meditating%20in%20modern%20minimalist%20room%20with%20plants%2C%20soft%20blue%20lighting%2C%20peaceful%20atmosphere&width=400&height=250&seq=post3&orientation=landscape" alt="Post Image" class="w-full h-48 object-cover object-top">
-                    <div class="p-6">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-[#E6E6EB] text-[#8C8C9C] text-xs px-3 py-1 rounded-full">Bem-estar</span>
-                            <span class="text-[#8C8C9C] text-sm ml-auto">8 Jun, 2025</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-[#5C5D6D] mb-3">Meditação: Benefícios para Mente e Corpo</h3>
-                        <p class="text-[#8C8C9C] mb-4 line-clamp-3">Conheça os benefícios científicos da meditação regular e aprenda técnicas simples para incorporá-la na sua rotina diária.</p>
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 rounded-full bg-[#E6E6EB] flex items-center justify-center">
-                                <i class="ri-user-line text-[#8C8C9C]"></i>
-                            </div>
-                            <div class="ml-3">
-                                <p class="font-medium text-[#5C5D6D]">Paulo Mendes</p>
-                                <p class="text-xs text-[#8C8C9C]">Especialista em Mindfulness</p>
-                            </div>
-                            <button class="ml-auto text-primary">
-                                <div class="w-8 h-8 flex items-center justify-center">
-                                    <i class="ri-bookmark-line"></i>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Categories Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl md:text-3xl font-bold text-[#5C5D6D] mb-10 text-center">Explore por Categorias</h2>
-            
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <!-- Category 1 -->
-                <a href="#" class="bg-[#F0F0F4] rounded-lg p-6 text-center hover:shadow-md transition group">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-secondary group-hover:bg-secondary group-hover:text-white transition">
-                        <i class="ri-health-book-line text-2xl"></i>
-                    </div>
-                    <h3 class="font-semibold text-[#5C5D6D]">Saúde</h3>
-                    <p class="text-sm text-[#8C8C9C] mt-2">23 artigos</p>
-                </a>
-                
-                <!-- Category 2 -->
-                <a href="#" class="bg-[#F0F0F4] rounded-lg p-6 text-center hover:shadow-md transition group">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-secondary group-hover:bg-secondary group-hover:text-white transition">
-                        <i class="ri-book-open-line text-2xl"></i>
-                    </div>
-                    <h3 class="font-semibold text-[#5C5D6D]">Educação</h3>
-                    <p class="text-sm text-[#8C8C9C] mt-2">18 artigos</p>
-                </a>
-                
-                <!-- Category 3 -->
-                <a href="#" class="bg-[#F0F0F4] rounded-lg p-6 text-center hover:shadow-md transition group">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-secondary group-hover:bg-secondary group-hover:text-white transition">
-                        <i class="ri-briefcase-4-line text-2xl"></i>
-                    </div>
-                    <h3 class="font-semibold text-[#5C5D6D]">Carreira</h3>
-                    <p class="text-sm text-[#8C8C9C] mt-2">15 artigos</p>
-                </a>
-                
-                <!-- Category 4 -->
-                <a href="#" class="bg-[#F0F0F4] rounded-lg p-6 text-center hover:shadow-md transition group">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-secondary group-hover:bg-secondary group-hover:text-white transition">
-                        <i class="ri-heart-line text-2xl"></i>
-                    </div>
-                    <h3 class="font-semibold text-[#5C5D6D]">Bem-estar</h3>
-                    <p class="text-sm text-[#8C8C9C] mt-2">21 artigos</p>
-                </a>
-                
-                <!-- Category 5 -->
-                <a href="#" class="bg-[#F0F0F4] rounded-lg p-6 text-center hover:shadow-md transition group">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-secondary group-hover:bg-secondary group-hover:text-white transition">
-                        <i class="ri-computer-line text-2xl"></i>
-                    </div>
-                    <h3 class="font-semibold text-[#5C5D6D]">Tecnologia</h3>
-                    <p class="text-sm text-[#8C8C9C] mt-2">19 artigos</p>
-                </a>
-                
-                <!-- Category 6 -->
-                <a href="#" class="bg-[#F0F0F4] rounded-lg p-6 text-center hover:shadow-md transition group">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-secondary group-hover:bg-secondary group-hover:text-white transition">
-                        <i class="ri-plant-line text-2xl"></i>
-                    </div>
-                    <h3 class="font-semibold text-[#5C5D6D]">Sustentabilidade</h3>
-                    <p class="text-sm text-[#8C8C9C] mt-2">12 artigos</p>
-                </a>
-                
-                <!-- Category 7 -->
-                <a href="#" class="bg-[#F0F0F4] rounded-lg p-6 text-center hover:shadow-md transition group">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-secondary group-hover:bg-secondary group-hover:text-white transition">
-                        <i class="ri-money-dollar-circle-line text-2xl"></i>
-                    </div>
-                    <h3 class="font-semibold text-[#5C5D6D]">Finanças</h3>
-                    <p class="text-sm text-[#8C8C9C] mt-2">16 artigos</p>
-                </a>
-                
-                <!-- Category 8 -->
-                <a href="#" class="bg-[#F0F0F4] rounded-lg p-6 text-center hover:shadow-md transition group">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-secondary group-hover:bg-secondary group-hover:text-white transition">
-                        <i class="ri-home-4-line text-2xl"></i>
-                    </div>
-                    <h3 class="font-semibold text-[#5C5D6D]">Estilo de Vida</h3>
-                    <p class="text-sm text-[#8C8C9C] mt-2">24 artigos</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Latest Posts with Sidebar -->
-    <section class="py-16 bg-[#F0F0F4]">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl md:text-3xl font-bold text-[#5C5D6D] mb-10">Artigos Recentes</h2>
-            
-            <div class="flex flex-col lg:flex-row gap-8">
-                <!-- Main Content -->
-                <div class="w-full lg:w-2/3">
-                    <div class="space-y-8">
-                        <!-- Post 1 -->
-                        <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row">
-                            <div class="md:w-1/3">
-                                <img src="https://readdy.ai/api/search-image?query=person%20working%20on%20laptop%20in%20modern%20office%20with%20blue%20and%20teal%20color%20accents%2C%20professional%20setting&width=300&height=200&seq=recent1&orientation=landscape" alt="Post Image" class="w-full h-full object-cover object-top">
-                            </div>
-                            <div class="md:w-2/3 p-6">
-                                <div class="flex items-center mb-3">
-                                    <span class="bg-[#E6E6EB] text-[#8C8C9C] text-xs px-3 py-1 rounded-full">Tecnologia</span>
-                                    <span class="text-[#8C8C9C] text-sm ml-auto">12 Jun, 2025</span>
-                                </div>
-                                <h3 class="text-xl font-bold text-[#5C5D6D] mb-3">Como a Inteligência Artificial está Transformando o Mercado de Trabalho</h3>
-                                <p class="text-[#8C8C9C] mb-4">Análise das mudanças que a IA está trazendo para diferentes setores e como profissionais podem se adaptar a esta nova realidade.</p>
-                                <div class="flex items-center">
-                                    <div class="w-8 h-8 rounded-full bg-[#E6E6EB] flex items-center justify-center">
-                                        <i class="ri-user-line text-[#8C8C9C]"></i>
-                                    </div>
-                                    <span class="ml-2 text-sm text-[#8C8C9C]">Carlos Fernandes</span>
-                                    <button class="ml-auto text-primary hover:underline">Ler mais</button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Post 2 -->
-                        <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row">
-                            <div class="md:w-1/3">
-                                <img src="https://readdy.ai/api/search-image?query=financial%20planning%20documents%20and%20calculator%20on%20desk%20with%20blue%20and%20teal%20color%20accents%2C%20professional%20setting&width=300&height=200&seq=recent2&orientation=landscape" alt="Post Image" class="w-full h-full object-cover object-top">
-                            </div>
-                            <div class="md:w-2/3 p-6">
-                                <div class="flex items-center mb-3">
-                                    <span class="bg-[#E6E6EB] text-[#8C8C9C] text-xs px-3 py-1 rounded-full">Finanças</span>
-                                    <span class="text-[#8C8C9C] text-sm ml-auto">9 Jun, 2025</span>
-                                </div>
-                                <h3 class="text-xl font-bold text-[#5C5D6D] mb-3">Planejamento Financeiro: Construindo seu Futuro Hoje</h3>
-                                <p class="text-[#8C8C9C] mb-4">Guia completo para organizar suas finanças pessoais e criar um plano eficiente para alcançar independência financeira.</p>
-                                <div class="flex items-center">
-                                    <div class="w-8 h-8 rounded-full bg-[#E6E6EB] flex items-center justify-center">
-                                        <i class="ri-user-line text-[#8C8C9C]"></i>
-                                    </div>
-                                    <span class="ml-2 text-sm text-[#8C8C9C]">Juliana Costa</span>
-                                    <button class="ml-auto text-primary hover:underline">Ler mais</button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Post 3 -->
-                        <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row">
-                            <div class="md:w-1/3">
-                                <img src="https://readdy.ai/api/search-image?query=sustainable%20eco-friendly%20products%20arranged%20neatly%20with%20plants%2C%20blue%20and%20teal%20color%20accents%2C%20bright%20natural%20lighting&width=300&height=200&seq=recent3&orientation=landscape" alt="Post Image" class="w-full h-full object-cover object-top">
-                            </div>
-                            <div class="md:w-2/3 p-6">
-                                <div class="flex items-center mb-3">
-                                    <span class="bg-[#E6E6EB] text-[#8C8C9C] text-xs px-3 py-1 rounded-full">Sustentabilidade</span>
-                                    <span class="text-[#8C8C9C] text-sm ml-auto">7 Jun, 2025</span>
-                                </div>
-                                <h3 class="text-xl font-bold text-[#5C5D6D] mb-3">Consumo Consciente: Pequenas Mudanças, Grande Impacto</h3>
-                                <p class="text-[#8C8C9C] mb-4">Dicas práticas para adotar um estilo de vida mais sustentável e reduzir sua pegada ecológica no dia a dia.</p>
-                                <div class="flex items-center">
-                                    <div class="w-8 h-8 rounded-full bg-[#E6E6EB] flex items-center justify-center">
-                                        <i class="ri-user-line text-[#8C8C9C]"></i>
-                                    </div>
-                                    <span class="ml-2 text-sm text-[#8C8C9C]">Beatriz Lima</span>
-                                    <button class="ml-auto text-primary hover:underline">Ler mais</button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Load More Button -->
-                        <div class="text-center mt-8">
-                            <button class="bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-button whitespace-nowrap font-medium transition">Carregar mais artigos</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Sidebar -->
-                <div class="w-full lg:w-1/3 space-y-8">
-                    <!-- Search Widget -->
-                    <div class="bg-white rounded-lg shadow-md p-6">
-                        <h3 class="text-lg font-bold text-[#5C5D6D] mb-4">Pesquisar</h3>
-                        <div class="relative">
-                            <input type="text" placeholder="O que você procura?" class="search-input w-full pl-10 pr-4 py-3 rounded-lg bg-[#F0F0F4] border-none text-sm">
-                            <div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-[#8C8C9C]">
-                                <i class="ri-search-line"></i>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Popular Tags -->
-                    <div class="bg-white rounded-lg shadow-md p-6">
-                        <h3 class="text-lg font-bold text-[#5C5D6D] mb-4">Tags Populares</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="#" class="bg-[#F0F0F4] text-[#8C8C9C] px-3 py-1 rounded-full text-sm hover:bg-secondary hover:text-white transition">Produtividade</a>
-                            <a href="#" class="bg-[#F0F0F4] text-[#8C8C9C] px-3 py-1 rounded-full text-sm hover:bg-secondary hover:text-white transition">Saúde Mental</a>
-                            <a href="#" class="bg-[#F0F0F4] text-[#8C8C9C] px-3 py-1 rounded-full text-sm hover:bg-secondary hover:text-white transition">Trabalho Remoto</a>
-                            <a href="#" class="bg-[#F0F0F4] text-[#8C8C9C] px-3 py-1 rounded-full text-sm hover:bg-secondary hover:text-white transition">Investimentos</a>
-                            <a href="#" class="bg-[#F0F0F4] text-[#8C8C9C] px-3 py-1 rounded-full text-sm hover:bg-secondary hover:text-white transition">Nutrição</a>
-                            <a href="#" class="bg-[#F0F0F4] text-[#8C8C9C] px-3 py-1 rounded-full text-sm hover:bg-secondary hover:text-white transition">Educação</a>
-                            <a href="#" class="bg-[#F0F0F4] text-[#8C8C9C] px-3 py-1 rounded-full text-sm hover:bg-secondary hover:text-white transition">Tecnologia</a>
-                            <a href="#" class="bg-[#F0F0F4] text-[#8C8C9C] px-3 py-1 rounded-full text-sm hover:bg-secondary hover:text-white transition">Sustentabilidade</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Newsletter -->
-                    <div class="bg-white rounded-lg shadow-md p-6">
-                        <h3 class="text-lg font-bold text-[#5C5D6D] mb-4">Assine nossa Newsletter</h3>
-                        <p class="text-[#8C8C9C] text-sm mb-4">Receba nossos melhores artigos diretamente no seu e-mail.</p>
-                        <div class="space-y-3">
-                            <input type="email" placeholder="Seu melhor e-mail" class="newsletter-input w-full px-4 py-3 rounded-lg bg-[#F0F0F4] border-none text-sm">
-                            <button class="w-full bg-primary text-white px-4 py-3 rounded-button whitespace-nowrap font-medium">Inscrever-se</button>
-                        </div>
-                    </div>
-                    
-                    <!-- Popular Posts -->
-                    <div class="bg-white rounded-lg shadow-md p-6">
-                        <h3 class="text-lg font-bold text-[#5C5D6D] mb-4">Artigos Populares</h3>
-                        <div class="space-y-4">
-                            <div class="flex gap-3">
-                                <div class="w-16 h-16 bg-[#F0F0F4] rounded flex-shrink-0 overflow-hidden">
-                                    <img src="https://readdy.ai/api/search-image?query=person%20exercising%20outdoors%2C%20blue%20sky%2C%20teal%20workout%20clothes&width=100&height=100&seq=pop1&orientation=squarish" alt="Popular Post" class="w-full h-full object-cover object-top">
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-[#5C5D6D] line-clamp-2">5 Exercícios para Fazer em Casa</h4>
-                                    <p class="text-xs text-[#8C8C9C] mt-1">5 Jun, 2025</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex gap-3">
-                                <div class="w-16 h-16 bg-[#F0F0F4] rounded flex-shrink-0 overflow-hidden">
-                                    <img src="https://readdy.ai/api/search-image?query=person%20reading%20book%20in%20cozy%20setting%20with%20blue%20and%20teal%20accents&width=100&height=100&seq=pop2&orientation=squarish" alt="Popular Post" class="w-full h-full object-cover object-top">
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-[#5C5D6D] line-clamp-2">Os Melhores Livros de 2025</h4>
-                                    <p class="text-xs text-[#8C8C9C] mt-1">2 Jun, 2025</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex gap-3">
-                                <div class="w-16 h-16 bg-[#F0F0F4] rounded flex-shrink-0 overflow-hidden">
-                                    <img src="https://readdy.ai/api/search-image?query=smartphone%20with%20financial%20app%2C%20blue%20and%20teal%20interface&width=100&height=100&seq=pop3&orientation=squarish" alt="Popular Post" class="w-full h-full object-cover object-top">
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-[#5C5D6D] line-clamp-2">Apps para Controle Financeiro</h4>
-                                    <p class="text-xs text-[#8C8C9C] mt-1">28 Mai, 2025</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="py-16 bg-primary bg-opacity-5">
-        <div class="container mx-auto px-4">
-            <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-2xl md:text-3xl font-bold text-[#5C5D6D] mb-4">Fique por dentro das novidades</h2>
-                <p class="text-[#8C8C9C] mb-8">Assine nossa newsletter e receba conteúdo exclusivo diretamente no seu e-mail.</p>
-                
-                <div class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
-                    <input type="email" placeholder="Seu melhor e-mail" class="newsletter-input flex-grow px-4 py-3 rounded-lg bg-white border-none text-sm">
-                    <button class="bg-primary text-white px-6 py-3 rounded-button whitespace-nowrap font-medium">Inscrever-se</button>
-                </div>
-                
-                <p class="text-xs text-[#8C8C9C] mt-4">Ao se inscrever, você concorda com nossa <a href="#" class="text-primary hover:underline">Política de Privacidade</a>.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-[#5C5D6D] text-white pt-16 pb-8">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-                <!-- About -->
-                <div>
-                    <a href="#" class="text-3xl font-['Pacifico'] text-white mb-4 inline-block">logo</a>
-                    <p class="text-gray-300 mb-4">Compartilhando conhecimento e inspirando novas perspectivas para o seu dia a dia.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-secondary transition">
-                            <i class="ri-facebook-fill text-white"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-secondary transition">
-                            <i class="ri-twitter-x-fill text-white"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-secondary transition">
-                            <i class="ri-instagram-fill text-white"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-secondary transition">
-                            <i class="ri-linkedin-fill text-white"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Links Rápidos</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Início</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Sobre Nós</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Artigos</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Categorias</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Contato</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Categories -->
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Categorias</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Saúde</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Tecnologia</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Finanças</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Educação</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Estilo de Vida</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Contact -->
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Contato</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <div class="w-5 h-5 flex-shrink-0 mt-1 flex items-center justify-center">
-                                <i class="ri-map-pin-line"></i>
-                            </div>
-                            <span class="ml-3 text-gray-300">Av. Paulista, 1000, São Paulo - SP, Brasil</span>
-                        </li>
-                        <li class="flex items-center">
-                            <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center">
-                                <i class="ri-mail-line"></i>
-                            </div>
-                            <span class="ml-3 text-gray-300">contato@blogmoderno.com.br</span>
-                        </li>
-                        <li class="flex items-center">
-                            <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center">
-                                <i class="ri-phone-line"></i>
-                            </div>
-                            <span class="ml-3 text-gray-300">(11) 9876-5432</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-700 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Blog Moderno. Todos os direitos reservados.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white text-sm transition">Termos de Uso</a>
-                        <a href="#" class="text-gray-400 hover:text-white text-sm transition">Política de Privacidade</a>
-                        <a href="#" class="text-gray-400 hover:text-white text-sm transition">Cookies</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Mobile Menu (Hidden by default) -->
-    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
-        <div class="bg-white h-full w-4/5 max-w-sm p-6 transform transition-transform duration-300 translate-x-0">
-            <div class="flex justify-between items-center mb-8">
-                <a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
-                <button id="close-menu" class="w-10 h-10 flex items-center justify-center text-[#5C5D6D]">
-                    <i class="ri-close-line text-2xl"></i>
-                </button>
-            </div>
-            
-            <nav class="space-y-4">
-                <a href="#" class="block py-2 text-[#5C5D6D] hover:text-primary font-medium transition border-b border-gray-100">Início</a>
-                <a href="#" class="block py-2 text-[#5C5D6D] hover:text-primary font-medium transition border-b border-gray-100">Artigos</a>
-                <a href="#" class="block py-2 text-[#5C5D6D] hover:text-primary font-medium transition border-b border-gray-100">Categorias</a>
-                <a href="#" class="block py-2 text-[#5C5D6D] hover:text-primary font-medium transition border-b border-gray-100">Sobre</a>
-                <a href="#" class="block py-2 text-[#5C5D6D] hover:text-primary font-medium transition border-b border-gray-100">Contato</a>
-            </nav>
-            
-            <div class="mt-8">
-                <div class="relative mb-4">
-                    <input type="text" placeholder="Pesquisar..." class="search-input w-full pl-10 pr-4 py-2 rounded-full bg-[#F0F0F4] border-none text-sm">
-                    <div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-[#8C8C9C]">
-                        <i class="ri-search-line"></i>
-                    </div>
-                </div>
-                <button class="w-full bg-primary text-white px-4 py-2 rounded-button whitespace-nowrap">Entrar</button>
-            </div>
-            
-            <div class="mt-8">
-                <h4 class="font-medium text-[#5C5D6D] mb-3">Siga-nos</h4>
-                <div class="flex space-x-3">
-                    <a href="#" class="w-9 h-9 rounded-full bg-[#F0F0F4] flex items-center justify-center text-[#8C8C9C] hover:bg-primary hover:text-white transition">
-                        <i class="ri-facebook-fill"></i>
-                    </a>
-                    <a href="#" class="w-9 h-9 rounded-full bg-[#F0F0F4] flex items-center justify-center text-[#8C8C9C] hover:bg-primary hover:text-white transition">
-                        <i class="ri-twitter-x-fill"></i>
-                    </a>
-                    <a href="#" class="w-9 h-9 rounded-full bg-[#F0F0F4] flex items-center justify-center text-[#8C8C9C] hover:bg-primary hover:text-white transition">
-                        <i class="ri-instagram-fill"></i>
-                    </a>
-                    <a href="#" class="w-9 h-9 rounded-full bg-[#F0F0F4] flex items-center justify-center text-[#8C8C9C] hover:bg-primary hover:text-white transition">
-                        <i class="ri-linkedin-fill"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Scripts -->
-    <script id="mobile-menu-script">
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.querySelector('.md\\:hidden');
-            const closeMenuButton = document.getElementById('close-menu');
-            const mobileMenu = document.getElementById('mobile-menu');
-            
-            mobileMenuButton.addEventListener('click', function() {
-                mobileMenu.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            });
-            
-            closeMenuButton.addEventListener('click', function() {
-                mobileMenu.classList.add('hidden');
-                document.body.style.overflow = '';
-            });
-            
-            mobileMenu.addEventListener('click', function(e) {
-                if (e.target === mobileMenu) {
-                    mobileMenu.classList.add('hidden');
-                    document.body.style.overflow = '';
-                }
-            });
-        });
-    </script>
+<body class="bg-gray-50">
+<!-- Navbar -->
+<nav class="fixed top-0 w-full bg-white shadow-sm z-50">
+<div class="max-w-[375px] mx-auto px-4 py-3 flex justify-between items-center">
+<div class="text-xl font-bold font-['Pacifico'] text-primary">logo</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-white px-4 py-2 !rounded-button text-sm font-medium">Contato</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="pt-16 pb-6 max-w-[375px] mx-auto px-4">
+<div class="mt-4">
+<h1 class="text-2xl font-bold text-gray-900 mb-2">Blog de Tecnologia e Programação</h1>
+<p class="text-gray-600 text-sm mb-4">Compartilhando conhecimento sobre dados, automação e desenvolvimento de software.</p>
+</div>
+<!-- Featured Posts -->
+<div class="grid grid-cols-1 gap-4 mt-6">
+<article class="bg-white p-4 rounded-lg shadow-sm">
+<div class="h-40 mb-3 rounded overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=programming%20code%20on%20computer%20screen%2C%20modern%20development%20environment%2C%20professional%20coding&width=400&height=200&seq=5&orientation=landscape" alt="Featured Post" class="w-full h-full object-cover">
+</div>
+<span class="text-xs text-primary">18 Jun 2025</span>
+<h3 class="text-lg font-medium mb-2">Introdução à Automação com Python</h3>
+<p class="text-sm text-gray-600 mb-3">Aprenda como automatizar tarefas repetitivas usando Python e bibliotecas populares.</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<i class="ri-time-line text-gray-400"></i>
+<span class="text-xs text-gray-400">5 min leitura</span>
+</div>
+<button class="text-primary text-sm font-medium">Ler mais</button>
+</div>
+</article>
+<article class="bg-white p-4 rounded-lg shadow-sm">
+<div class="h-40 mb-3 rounded overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=data%20visualization%2C%20analytics%20dashboard%2C%20professional%20business%20charts&width=400&height=200&seq=6&orientation=landscape" alt="Featured Post" class="w-full h-full object-cover">
+</div>
+<span class="text-xs text-primary">17 Jun 2025</span>
+<h3 class="text-lg font-medium mb-2">Análise de Dados na Prática</h3>
+<p class="text-sm text-gray-600 mb-3">Como utilizar ferramentas de análise de dados para tomar decisões melhores.</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<i class="ri-time-line text-gray-400"></i>
+<span class="text-xs text-gray-400">7 min leitura</span>
+</div>
+<button class="text-primary text-sm font-medium">Ler mais</button>
+</div>
+</article>
+</div>
+</section>
+<!-- How We Protect Section -->
+<section class="py-6 max-w-[375px] mx-auto px-4">
+<h2 class="text-xl font-bold text-gray-900 mb-4">Como Protegemos Sua Organização</h2>
+<div class="grid grid-cols-3 gap-3 mb-6">
+<div class="bg-white p-3 rounded-lg shadow-sm">
+<div class="flex flex-col items-center">
+<span class="text-primary text-xl font-bold">R$20B</span>
+<p class="text-xs text-gray-600 text-center mt-1">Fraudes prevenidas anualmente</p>
+</div>
+</div>
+<div class="bg-white p-3 rounded-lg shadow-sm">
+<div class="flex flex-col items-center">
+<span class="text-primary text-xl font-bold">80%</span>
+<p class="text-xs text-gray-600 text-center mt-1">Redução de alertas falsos</p>
+</div>
+</div>
+<div class="bg-white p-3 rounded-lg shadow-sm">
+<div class="flex flex-col items-center">
+<span class="text-primary text-xl font-bold">10x</span>
+<p class="text-xs text-gray-600 text-center mt-1">Mais rápido que análise manual</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-6 max-w-[375px] mx-auto px-4 bg-white">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-xl font-bold text-gray-900">O Que Nos Torna <span class="text-primary">Diferentes</span></h2>
+<div class="flex items-center">
+<span class="text-xs mr-2">96%</span>
+<div class="w-10 h-5 bg-primary rounded-full relative">
+<div class="w-4 h-4 bg-white rounded-full absolute top-0.5 right-0.5"></div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-4 mb-6">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-full">
+<i class="ri-shield-check-line text-primary"></i>
+</div>
+<div>
+<h3 class="text-sm font-medium mb-1">Proteção em Tempo Real</h3>
+<p class="text-xs text-gray-600">Monitoramento contínuo de transações com alertas instantâneos.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-full">
+<i class="ri-ai-generate-line text-primary"></i>
+</div>
+<div>
+<h3 class="text-sm font-medium mb-1">IA Avançada</h3>
+<p class="text-xs text-gray-600">Algoritmos de aprendizado de máquina que se adaptam a novos padrões de fraude.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-full">
+<i class="ri-dashboard-line text-primary"></i>
+</div>
+<div>
+<h3 class="text-sm font-medium mb-1">Dashboard Intuitivo</h3>
+<p class="text-xs text-gray-600">Visualização clara de métricas e alertas em uma interface amigável.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Features Section -->
+<section class="py-6 max-w-[375px] mx-auto px-4">
+<h2 class="text-xl font-bold text-gray-900 mb-4">Nossos Recursos & Capacidades</h2>
+<div class="grid grid-cols-1 gap-3 mb-6">
+<div class="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
+<div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-full">
+<i class="ri-shield-keyhole-line text-primary"></i>
+</div>
+<span class="text-sm">Verificação de Identidade Segura</span>
+</div>
+<div class="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
+<div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-full">
+<i class="ri-fingerprint-line text-primary"></i>
+</div>
+<span class="text-sm">Proteção Contra Fraudes</span>
+</div>
+<div class="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
+<div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-full">
+<i class="ri-file-chart-line text-primary"></i>
+</div>
+<span class="text-sm">Relatórios Detalhados</span>
+</div>
+</div>
+<div class="bg-gray-900 text-white p-4 rounded-lg shadow-sm mb-6">
+<div class="flex items-center gap-2 mb-2">
+<i class="ri-terminal-box-line text-primary"></i>
+<span class="text-sm font-medium">API Avançada</span>
+</div>
+<p class="text-xs mb-3">Integração simples com seus sistemas existentes através de nossa API robusta.</p>
+<div class="bg-gray-800 p-2 rounded text-xs font-mono">
+GET /api/v1/risk-score
+</div>
+</div>
+</section>
+<!-- Expert Section -->
+<section class="py-6 max-w-[375px] mx-auto px-4">
+<div class="bg-gray-900 text-white p-4 rounded-lg shadow-sm mb-6">
+<h2 class="text-lg font-bold mb-2">Construído por Especialistas em <span class="text-primary">Risco</span> e <span class="text-primary">Automação de Fraude</span></h2>
+<p class="text-xs mb-4">Nossa equipe combina décadas de experiência em segurança digital com as mais recentes tecnologias de IA.</p>
+<div class="flex items-center gap-3">
+<i class="ri-check-double-line text-primary"></i>
+<span class="text-sm">Expertise em Detecção de Fraude</span>
+</div>
+</div>
+</section>
+<!-- Customer Section -->
+<section class="py-6 max-w-[375px] mx-auto px-4">
+<h2 class="text-xl font-bold text-gray-900 mb-1">O Que Dizem Nossos</h2>
+<h2 class="text-xl font-bold text-primary mb-4">Clientes</h2>
+<div class="bg-white p-4 rounded-lg shadow-sm mb-3">
+<div class="flex items-center gap-2 mb-2">
+<div class="w-10 h-10 bg-gray-200 rounded-full overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20Brazilian%20business%20man%20in%20suit%2C%20corporate%20portrait%2C%20neutral%20background&width=100&height=100&seq=1&orientation=squarish" alt="Cliente" class="w-full h-full object-cover">
+</div>
+<div>
+<h3 class="text-sm font-medium">Ricardo Oliveira</h3>
+<p class="text-xs text-gray-600">Diretor de Segurança, Banco Nacional</p>
+</div>
+</div>
+<p class="text-xs text-gray-700">"A implementação desta solução reduziu nossas fraudes em 78% no primeiro trimestre. A equipe de suporte é excepcional e sempre disponível."</p>
+<div class="flex mt-2">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+</div>
+<div class="bg-white p-4 rounded-lg shadow-sm">
+<div class="flex items-center gap-2 mb-2">
+<div class="w-10 h-10 bg-gray-200 rounded-full overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20Brazilian%20business%20woman%2C%20corporate%20portrait%2C%20neutral%20background&width=100&height=100&seq=2&orientation=squarish" alt="Cliente" class="w-full h-full object-cover">
+</div>
+<div>
+<h3 class="text-sm font-medium">Ana Beatriz Santos</h3>
+<p class="text-xs text-gray-600">COO, E-commerce Brasileiro</p>
+</div>
+</div>
+<p class="text-xs text-gray-700">"A plataforma é intuitiva e os insights gerados pelos relatórios nos ajudaram a identificar vulnerabilidades que nem sabíamos que existiam."</p>
+<div class="flex mt-2">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-half-fill text-yellow-400"></i>
+</div>
+</div>
+</section>
+<!-- Update Section -->
+<section class="py-6 max-w-[375px] mx-auto px-4">
+<h2 class="text-xl font-bold text-gray-900 mb-1">Últimas <span class="text-primary">Atualizações</span> da Nossa</h2>
+<h2 class="text-xl font-bold text-gray-900 mb-4">Comunidade</h2>
+<div class="grid grid-cols-2 gap-3 mb-6">
+<div class="bg-white p-3 rounded-lg shadow-sm">
+<div class="h-24 mb-2 rounded overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=cybersecurity%20concept%2C%20digital%20protection%20shield%2C%20data%20security%20visualization%2C%20professional&width=180&height=120&seq=3&orientation=landscape" alt="Segurança" class="w-full h-full object-cover">
+</div>
+<h3 class="text-sm font-medium mb-1">Novas Ferramentas de Análise</h3>
+<p class="text-xs text-gray-600 line-clamp-2">Conheça nossas novas ferramentas de análise preditiva para detecção de fraudes.</p>
+<div class="flex items-center mt-2">
+<span class="text-xs text-primary">Ler mais</span>
+<i class="ri-arrow-right-line text-primary ri-xs ml-1"></i>
+</div>
+</div>
+<div class="bg-white p-3 rounded-lg shadow-sm">
+<div class="h-24 mb-2 rounded overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=business%20meeting%2C%20team%20discussing%20data%20security%2C%20professional%20office%20environment&width=180&height=120&seq=4&orientation=landscape" alt="Webinar" class="w-full h-full object-cover">
+</div>
+<h3 class="text-sm font-medium mb-1">Webinar Mensal</h3>
+<p class="text-xs text-gray-600 line-clamp-2">Participe do nosso próximo webinar sobre tendências em segurança digital.</p>
+<div class="flex items-center mt-2">
+<span class="text-xs text-primary">Inscrever-se</span>
+<i class="ri-arrow-right-line text-primary ri-xs ml-1"></i>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-6 max-w-[375px] mx-auto px-4 bg-gray-900 text-white">
+<h2 class="text-xl font-bold mb-2">Combata Fraudes e Riscos</h2>
+<p class="text-sm mb-4">Integre clientes com nossa plataforma poderosa e segura</p>
+<button class="bg-primary text-white px-4 py-2 !rounded-button text-sm font-medium w-full">Começar Agora</button>
+</section>
+<!-- Social Links -->
+<section class="py-6 max-w-[375px] mx-auto px-4">
+<h2 class="text-xl font-bold text-gray-900 mb-4">Conecte-se Conosco</h2>
+<div class="grid grid-cols-3 gap-3 mb-6">
+<a href="https://www.linkedin.com/in/erique-ferreira-6451382a2/" class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center cursor-pointer">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full">
+<i class="ri-linkedin-fill text-blue-600 ri-lg"></i>
+</div>
+<span class="text-xs mt-2">LinkedIn</span>
+</a>
+<a href="https://github.com/hoerique" class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center cursor-pointer">
+<div class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full">
+<i class="ri-github-fill text-gray-800 ri-lg"></i>
+</div>
+<span class="text-xs mt-2">GitHub</span>
+</a>
+<a href="https://wa.me/5589981137053" class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center cursor-pointer">
+<div class="w-10 h-10 flex items-center justify-center bg-green-100 rounded-full">
+<i class="ri-whatsapp-fill text-green-600 ri-lg"></i>
+</div>
+<span class="text-xs mt-2">WhatsApp</span>
+</a>
+</div>
+</section>
+<!-- Footer -->
+<footer class="py-6 bg-gray-900 text-white">
+<div class="max-w-[375px] mx-auto px-4">
+<div class="mb-6">
+<div class="text-xl font-bold font-['Pacifico'] text-primary mb-4">logo</div>
+<p class="text-sm text-gray-400">IA | Dados & Programação</p>
+<p class="text-sm text-gray-400">Automação com foco em resultado</p>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div>
+<h3 class="text-sm font-medium mb-2">Links Rápidos</h3>
+<ul class="text-xs text-gray-400">
+<li class="mb-1 cursor-pointer">Início</li>
+<li class="mb-1 cursor-pointer">Serviços</li>
+<li class="mb-1 cursor-pointer">Sobre Nós</li>
+<li class="cursor-pointer">Contato</li>
+</ul>
+</div>
+<div>
+<h3 class="text-sm font-medium mb-2">Contato</h3>
+<ul class="text-xs text-gray-400">
+<li class="mb-1 flex items-center">
+<i class="ri-mail-line mr-1"></i>
+contato@iadados.com.br
+</li>
+<li class="flex items-center">
+<i class="ri-phone-line mr-1"></i>
++55 89 98113-7053
+</li>
+</ul>
+</div>
+</div>
+<div class="text-xs text-gray-500 text-center">
+© 2025 IA | Dados & Programação. Todos os direitos reservados.
+</div>
+</div>
+</footer>
+<!-- Tab Bar -->
+<div class="fixed bottom-0 w-full bg-white border-t border-gray-200 shadow-lg">
+<div class="max-w-[375px] mx-auto grid grid-cols-4 py-2">
+<a href="#" class="flex flex-col items-center cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-home-5-line text-primary"></i>
+</div>
+<span class="text-xs mt-1 text-primary">Início</span>
+</a>
+<a href="#" class="flex flex-col items-center cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-article-line text-gray-500"></i>
+</div>
+<span class="text-xs mt-1 text-gray-500">Artigos</span>
+</a>
+<a href="#" class="flex flex-col items-center cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-bookmark-line text-gray-500"></i>
+</div>
+<span class="text-xs mt-1 text-gray-500">Salvos</span>
+</a>
+<a href="#" class="flex flex-col items-center cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-user-line text-gray-500"></i>
+</div>
+<span class="text-xs mt-1 text-gray-500">Perfil</span>
+</a>
+</div>
+</div>
+<script id="navbarInteraction">
+document.addEventListener('DOMContentLoaded', function() {
+const navbarButtons = document.querySelectorAll('nav button');
+navbarButtons.forEach(button => {
+button.addEventListener('click', function() {
+console.log('Botão de navegação clicado');
+});
+});
+});
+</script>
+<script id="tabBarInteraction">
+document.addEventListener('DOMContentLoaded', function() {
+const tabItems = document.querySelectorAll('.fixed.bottom-0 a');
+tabItems.forEach(item => {
+item.addEventListener('click', function(e) {
+e.preventDefault();
+// Reset all tabs
+tabItems.forEach(tab => {
+const icon = tab.querySelector('i');
+const text = tab.querySelector('span');
+icon.className = icon.className.replace('-fill', '-line').replace('text-primary', 'text-gray-500');
+text.className = text.className.replace('text-primary', 'text-gray-500');
+});
+// Activate clicked tab
+const icon = this.querySelector('i');
+const text = this.querySelector('span');
+icon.className = icon.className.replace('-line', '-fill').replace('text-gray-500', 'text-primary');
+text.className = text.className.replace('text-gray-500', 'text-primary');
+});
+});
+});
+</script>
+<script id="socialLinksInteraction">
+document.addEventListener('DOMContentLoaded', function() {
+const socialLinks = document.querySelectorAll('section a[href]');
+socialLinks.forEach(link => {
+link.addEventListener('click', function(e) {
+const href = this.getAttribute('href');
+if (href && href.startsWith('http')) {
+e.preventDefault();
+window.open(href, '_blank');
+}
+});
+});
+});
+</script>
 </body>
 </html>
