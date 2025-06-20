@@ -14,4 +14,3 @@ Este blog complementa o conteúdo publicado no Instagram:
 ---
 
 ## 🧱 Estrutura do Projeto
-
