@@ -1,19 +1,17 @@
 # 🚀 Gestão Automatizado
 
-Bem-vindo ao blog **Gestão Automatizado**, um espaço criado para compartilhar **dicas práticas de automação, produtividade e ferramentas digitais** voltadas para empreendedores, analistas e gestores que buscam otimizar suas rotinas.
+Bem-vindo ao blog **Gestão Automatizado**, um projeto criado para compartilhar **dicas de automação, produtividade e ferramentas digitais** para quem busca mais eficiência e organização na rotina de trabalho.
 
-Este projeto é parte do conteúdo publicado no Instagram [@gestao_automatizada](https://www.instagram.com/gestao_automatizada).
+Este blog complementa o conteúdo publicado no Instagram:  
+📸 [@gestao_automatizada](https://www.instagram.com/gestao_automatizada)
 
 ---
 
 ## 🌐 Acesse o Blog
 
-📎 [Clique aqui para acessar o blog online](https://seuusuario.github.io/seurepositorio)
-
-> Substitua o link acima com o endereço real do seu GitHub Pages.
+🔗 [Clique aqui para acessar o blog online](https://ferreira-erique.vercel.app)
 
 ---
 
 ## 🧱 Estrutura do Projeto
-
 
