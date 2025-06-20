@@ -317,63 +317,12 @@ contato@iadados.com.br
 </div>
 </div>
 </footer>
-<!-- Tab Bar -->
-<div class="fixed bottom-0 w-full bg-white border-t border-gray-200 shadow-lg">
-<div class="max-w-[375px] mx-auto grid grid-cols-4 py-2">
-<a href="#" class="flex flex-col items-center cursor-pointer">
-<div class="w-6 h-6 flex items-center justify-center">
-<i class="ri-home-5-line text-primary"></i>
-</div>
-<span class="text-xs mt-1 text-primary">Início</span>
-</a>
-<a href="#" class="flex flex-col items-center cursor-pointer">
-<div class="w-6 h-6 flex items-center justify-center">
-<i class="ri-article-line text-gray-500"></i>
-</div>
-<span class="text-xs mt-1 text-gray-500">Artigos</span>
-</a>
-<a href="#" class="flex flex-col items-center cursor-pointer">
-<div class="w-6 h-6 flex items-center justify-center">
-<i class="ri-bookmark-line text-gray-500"></i>
-</div>
-<span class="text-xs mt-1 text-gray-500">Salvos</span>
-</a>
-<a href="#" class="flex flex-col items-center cursor-pointer">
-<div class="w-6 h-6 flex items-center justify-center">
-<i class="ri-user-line text-gray-500"></i>
-</div>
-<span class="text-xs mt-1 text-gray-500">Perfil</span>
-</a>
-</div>
-</div>
 <script id="navbarInteraction">
 document.addEventListener('DOMContentLoaded', function() {
 const navbarButtons = document.querySelectorAll('nav button');
 navbarButtons.forEach(button => {
 button.addEventListener('click', function() {
 console.log('Botão de navegação clicado');
-});
-});
-});
-</script>
-<script id="tabBarInteraction">
-document.addEventListener('DOMContentLoaded', function() {
-const tabItems = document.querySelectorAll('.fixed.bottom-0 a');
-tabItems.forEach(item => {
-item.addEventListener('click', function(e) {
-e.preventDefault();
-// Reset all tabs
-tabItems.forEach(tab => {
-const icon = tab.querySelector('i');
-const text = tab.querySelector('span');
-icon.className = icon.className.replace('-fill', '-line').replace('text-primary', 'text-gray-500');
-text.className = text.className.replace('text-primary', 'text-gray-500');
-});
-// Activate clicked tab
-const icon = this.querySelector('i');
-const text = this.querySelector('span');
-icon.className = icon.className.replace('-line', '-fill').replace('text-gray-500', 'text-primary');
-text.className = text.className.replace('text-gray-500', 'text-primary');
 });
 });
 });
