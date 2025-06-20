@@ -1,11 +1,19 @@
 # 🚀 Gestão Automatizado
 
-Bem-vindo ao blog **Gestão Automatizado**, um projeto criado para compartilhar conteúdos sobre **automação, ferramentas digitais e estratégias de gestão com foco em produtividade**.  
-Este blog é a extensão do conteúdo postado no meu Instagram: [@gestaoautomatizado](https://www.instagram.com/gestaoautomatizado)
+Bem-vindo ao blog **Gestão Automatizado**, um espaço criado para compartilhar **dicas práticas de automação, produtividade e ferramentas digitais** voltadas para empreendedores, analistas e gestores que buscam otimizar suas rotinas.
 
-## 🧠 Sobre o Projeto
+Este projeto é parte do conteúdo publicado no Instagram [@gestao_automatizada](https://www.instagram.com/gestao_automatizada).
 
-Este site é construído de forma simples, usando apenas **HTML** para garantir leveza, velocidade e acessibilidade.
+---
 
-### 📄 Estrutura
+## 🌐 Acesse o Blog
+
+📎 [Clique aqui para acessar o blog online](https://seuusuario.github.io/seurepositorio)
+
+> Substitua o link acima com o endereço real do seu GitHub Pages.
+
+---
+
+## 🧱 Estrutura do Projeto
+
 
