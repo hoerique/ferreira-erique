@@ -1,345 +1,312 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> IA | Dados & Programação
-Automação</title>
-<script src="https://cdn.tailwindcss.com/3.4.16"></script>
-<script>tailwind.config={theme:{extend:{colors:{primary:'#FF6B00',secondary:'#1E293B'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-<style>
-:where([class^="ri-"])::before { content: "\f3c2"; }
-body {
-font-family: 'Inter', sans-serif;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Erique Ferreira | Análise de Dados</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+    }
+  </style>
 </head>
-<body class="bg-gray-50">
-<!-- Navbar -->
-<nav class="fixed top-0 w-full bg-white shadow-sm z-50">
-<div class="max-w-[375px] mx-auto px-4 py-3 flex justify-between items-center">
-<div class="text-xl font-bold font-['Pacifico'] text-primary">👑</div>
-<div class="flex items-center gap-4">
-<button class="bg-primary text-white px-4 py-2 !rounded-button text-sm font-medium">Contato</button>
-</div>
-</div>
-</nav>
-<!-- Hero Section -->
-<section class="pt-16 pb-6 max-w-[375px] mx-auto px-4">
-<div class="mt-4">
-<h1 class="text-2xl font-bold text-gray-900 mb-2">Gestão automatizada</h1>
-<p class="text-gray-600 text-sm mb-4">Compartilhando conhecimento sobre dados, automação e desenvolvimento de software.</p>
-</div>
-<!-- Featured Posts -->
-<div class="grid grid-cols-1 gap-4 mt-6">
-<article class="bg-white p-4 rounded-lg shadow-sm">
-<div class="h-40 mb-3 rounded overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=programming%20code%20on%20computer%20screen%2C%20modern%20development%20environment%2C%20professional%20coding&width=400&height=200&seq=5&orientation=landscape" alt="Featured Post" class="w-full h-full object-cover">
-</div>
-<span class="text-xs text-primary">18 Jun 2025</span>
-<h3 class="text-lg font-medium mb-2">Introdução à Automação com Python</h3>
-<p class="text-sm text-gray-600 mb-3">Aprenda como automatizar tarefas repetitivas usando Python e bibliotecas populares.</p>
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-2">
-<i class="ri-time-line text-gray-400"></i>
-<span class="text-xs text-gray-400">5 min leitura</span>
-</div>
-<button class="text-primary text-sm font-medium">Ler mais</button>
-</div>
-</article>
-<article class="bg-white p-4 rounded-lg shadow-sm">
-<div class="h-40 mb-3 rounded overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=data%20visualization%2C%20analytics%20dashboard%2C%20professional%20business%20charts&width=400&height=200&seq=6&orientation=landscape" alt="Featured Post" class="w-full h-full object-cover">
-</div>
-<span class="text-xs text-primary">17 Jun 2025</span>
-<h3 class="text-lg font-medium mb-2">Análise de Dados na Prática</h3>
-<p class="text-sm text-gray-600 mb-3">Como utilizar ferramentas de análise de dados para tomar decisões melhores.</p>
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-2">
-<i class="ri-time-line text-gray-400"></i>
-<span class="text-xs text-gray-400">7 min leitura</span>
-</div>
-<button class="text-primary text-sm font-medium">Ler mais</button>
-</div>
-</article>
-</div>
-</section>
-<!-- How We Protect Section -->
-<section class="py-6 max-w-[375px] mx-auto px-4">
-<h2 class="text-xl font-bold text-gray-900 mb-4">Como Protegemos Sua Organização</h2>
-<div class="grid grid-cols-3 gap-3 mb-6">
-<div class="bg-white p-3 rounded-lg shadow-sm">
-<div class="flex flex-col items-center">
-<span class="text-primary text-xl font-bold">R$20B</span>
-<p class="text-xs text-gray-600 text-center mt-1">Fraudes prevenidas anualmente</p>
-</div>
-</div>
-<div class="bg-white p-3 rounded-lg shadow-sm">
-<div class="flex flex-col items-center">
-<span class="text-primary text-xl font-bold">80%</span>
-<p class="text-xs text-gray-600 text-center mt-1">Redução de alertas falsos</p>
-</div>
-</div>
-<div class="bg-white p-3 rounded-lg shadow-sm">
-<div class="flex flex-col items-center">
-<span class="text-primary text-xl font-bold">10x</span>
-<p class="text-xs text-gray-600 text-center mt-1">Mais rápido que análise manual</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Features Section -->
-<section class="py-6 max-w-[375px] mx-auto px-4 bg-white">
-<div class="flex justify-between items-center mb-4">
-<h2 class="text-xl font-bold text-gray-900">O Que Nos Torna <span class="text-primary">Diferentes</span></h2>
-<div class="flex items-center">
-<span class="text-xs mr-2">96%</span>
-<div class="w-10 h-5 bg-primary rounded-full relative">
-<div class="w-4 h-4 bg-white rounded-full absolute top-0.5 right-0.5"></div>
-</div>
-</div>
-</div>
-<div class="grid grid-cols-1 gap-4 mb-6">
-<div class="flex items-start gap-3">
-<div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-full">
-<i class="ri-shield-check-line text-primary"></i>
-</div>
-<div>
-<h3 class="text-sm font-medium mb-1">Proteção em Tempo Real</h3>
-<p class="text-xs text-gray-600">Monitoramento contínuo de transações com alertas instantâneos.</p>
-</div>
-</div>
-<div class="flex items-start gap-3">
-<div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-full">
-<i class="ri-ai-generate-line text-primary"></i>
-</div>
-<div>
-<h3 class="text-sm font-medium mb-1">IA Avançada</h3>
-<p class="text-xs text-gray-600">Algoritmos de aprendizado de máquina que se adaptam a novos padrões de fraude.</p>
-</div>
-</div>
-<div class="flex items-start gap-3">
-<div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-full">
-<i class="ri-dashboard-line text-primary"></i>
-</div>
-<div>
-<h3 class="text-sm font-medium mb-1">Dashboard Intuitivo</h3>
-<p class="text-xs text-gray-600">Visualização clara de métricas e alertas em uma interface amigável.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Key Features Section -->
-<section class="py-6 max-w-[375px] mx-auto px-4">
-<h2 class="text-xl font-bold text-gray-900 mb-4">Nossos Recursos & Capacidades</h2>
-<div class="grid grid-cols-1 gap-3 mb-6">
-<div class="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
-<div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-full">
-<i class="ri-shield-keyhole-line text-primary"></i>
-</div>
-<span class="text-sm">Verificação de Identidade Segura</span>
-</div>
-<div class="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
-<div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-full">
-<i class="ri-fingerprint-line text-primary"></i>
-</div>
-<span class="text-sm">Proteção Contra Fraudes</span>
-</div>
-<div class="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
-<div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-full">
-<i class="ri-file-chart-line text-primary"></i>
-</div>
-<span class="text-sm">Relatórios Detalhados</span>
-</div>
-</div>
-<div class="bg-gray-900 text-white p-4 rounded-lg shadow-sm mb-6">
-<div class="flex items-center gap-2 mb-2">
-<i class="ri-terminal-box-line text-primary"></i>
-<span class="text-sm font-medium">API Avançada</span>
-</div>
-<p class="text-xs mb-3">Integração simples com seus sistemas existentes através de nossa API robusta.</p>
-<div class="bg-gray-800 p-2 rounded text-xs font-mono">
-GET /api/v1/risk-score
-</div>
-</div>
-</section>
-<!-- Expert Section -->
-<section class="py-6 max-w-[375px] mx-auto px-4">
-<div class="bg-gray-900 text-white p-4 rounded-lg shadow-sm mb-6">
-<h2 class="text-lg font-bold mb-2">Construído por Especialistas em <span class="text-primary">Risco</span> e <span class="text-primary">Automação de Fraude</span></h2>
-<p class="text-xs mb-4">Nossa equipe combina décadas de experiência em segurança digital com as mais recentes tecnologias de IA.</p>
-<div class="flex items-center gap-3">
-<i class="ri-check-double-line text-primary"></i>
-<span class="text-sm">Expertise em Detecção de Fraude</span>
-</div>
-</div>
-</section>
-<!-- Customer Section -->
-<section class="py-6 max-w-[375px] mx-auto px-4">
-<h2 class="text-xl font-bold text-gray-900 mb-1">O Que Dizem Nossos</h2>
-<h2 class="text-xl font-bold text-primary mb-4">Clientes</h2>
-<div class="bg-white p-4 rounded-lg shadow-sm mb-3">
-<div class="flex items-center gap-2 mb-2">
-<div class="w-10 h-10 bg-gray-200 rounded-full overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20Brazilian%20business%20man%20in%20suit%2C%20corporate%20portrait%2C%20neutral%20background&width=100&height=100&seq=1&orientation=squarish" alt="Cliente" class="w-full h-full object-cover">
-</div>
-<div>
-<h3 class="text-sm font-medium">Ricardo Oliveira</h3>
-<p class="text-xs text-gray-600">Diretor de Segurança, Banco Nacional</p>
-</div>
-</div>
-<p class="text-xs text-gray-700">"A implementação desta solução reduziu nossas fraudes em 78% no primeiro trimestre. A equipe de suporte é excepcional e sempre disponível."</p>
-<div class="flex mt-2">
-<i class="ri-star-fill text-yellow-400"></i>
-<i class="ri-star-fill text-yellow-400"></i>
-<i class="ri-star-fill text-yellow-400"></i>
-<i class="ri-star-fill text-yellow-400"></i>
-<i class="ri-star-fill text-yellow-400"></i>
-</div>
-</div>
-<div class="bg-white p-4 rounded-lg shadow-sm">
-<div class="flex items-center gap-2 mb-2">
-<div class="w-10 h-10 bg-gray-200 rounded-full overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20Brazilian%20business%20woman%2C%20corporate%20portrait%2C%20neutral%20background&width=100&height=100&seq=2&orientation=squarish" alt="Cliente" class="w-full h-full object-cover">
-</div>
-<div>
-<h3 class="text-sm font-medium">Ana Beatriz Santos</h3>
-<p class="text-xs text-gray-600">COO, E-commerce Brasileiro</p>
-</div>
-</div>
-<p class="text-xs text-gray-700">"A plataforma é intuitiva e os insights gerados pelos relatórios nos ajudaram a identificar vulnerabilidades que nem sabíamos que existiam."</p>
-<div class="flex mt-2">
-<i class="ri-star-fill text-yellow-400"></i>
-<i class="ri-star-fill text-yellow-400"></i>
-<i class="ri-star-fill text-yellow-400"></i>
-<i class="ri-star-fill text-yellow-400"></i>
-<i class="ri-star-half-fill text-yellow-400"></i>
-</div>
-</div>
-</section>
-<!-- Update Section -->
-<section class="py-6 max-w-[375px] mx-auto px-4">
-<h2 class="text-xl font-bold text-gray-900 mb-1">Últimas <span class="text-primary">Atualizações</span> da Nossa</h2>
-<h2 class="text-xl font-bold text-gray-900 mb-4">Comunidade</h2>
-<div class="grid grid-cols-2 gap-3 mb-6">
-<div class="bg-white p-3 rounded-lg shadow-sm">
-<div class="h-24 mb-2 rounded overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=cybersecurity%20concept%2C%20digital%20protection%20shield%2C%20data%20security%20visualization%2C%20professional&width=180&height=120&seq=3&orientation=landscape" alt="Segurança" class="w-full h-full object-cover">
-</div>
-<h3 class="text-sm font-medium mb-1">Novas Ferramentas de Análise</h3>
-<p class="text-xs text-gray-600 line-clamp-2">Conheça nossas novas ferramentas de análise preditiva para detecção de fraudes.</p>
-<div class="flex items-center mt-2">
-<span class="text-xs text-primary">Ler mais</span>
-<i class="ri-arrow-right-line text-primary ri-xs ml-1"></i>
-</div>
-</div>
-<div class="bg-white p-3 rounded-lg shadow-sm">
-<div class="h-24 mb-2 rounded overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=business%20meeting%2C%20team%20discussing%20data%20security%2C%20professional%20office%20environment&width=180&height=120&seq=4&orientation=landscape" alt="Webinar" class="w-full h-full object-cover">
-</div>
-<h3 class="text-sm font-medium mb-1">Webinar Mensal</h3>
-<p class="text-xs text-gray-600 line-clamp-2">Participe do nosso próximo webinar sobre tendências em segurança digital.</p>
-<div class="flex items-center mt-2">
-<span class="text-xs text-primary">Inscrever-se</span>
-<i class="ri-arrow-right-line text-primary ri-xs ml-1"></i>
-</div>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="py-6 max-w-[375px] mx-auto px-4 bg-gray-900 text-white">
-<h2 class="text-xl font-bold mb-2">Combata Fraudes e Riscos</h2>
-<p class="text-sm mb-4">Integre clientes com nossa plataforma poderosa e segura</p>
-<button class="bg-primary text-white px-4 py-2 !rounded-button text-sm font-medium w-full">Começar Agora</button>
-</section>
-<!-- Social Links -->
-<section class="py-6 max-w-[375px] mx-auto px-4">
-<h2 class="text-xl font-bold text-gray-900 mb-4">Conecte-se Conosco</h2>
-<div class="grid grid-cols-3 gap-3 mb-6">
-<a href="https://www.linkedin.com/in/erique-ferreira-6451382a2/" class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center cursor-pointer">
-<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full">
-<i class="ri-linkedin-fill text-blue-600 ri-lg"></i>
-</div>
-<span class="text-xs mt-2">LinkedIn</span>
-</a>
-<a href="https://github.com/hoerique" class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center cursor-pointer">
-<div class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full">
-<i class="ri-github-fill text-gray-800 ri-lg"></i>
-</div>
-<span class="text-xs mt-2">GitHub</span>
-</a>
-<a href="https://wa.me/5589981137053" class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center cursor-pointer">
-<div class="w-10 h-10 flex items-center justify-center bg-green-100 rounded-full">
-<i class="ri-whatsapp-fill text-green-600 ri-lg"></i>
-</div>
-<span class="text-xs mt-2">WhatsApp</span>
-</a>
-</div>
-</section>
-<!-- Footer -->
-<footer class="py-6 bg-gray-900 text-white">
-<div class="max-w-[375px] mx-auto px-4">
-<div class="mb-6">
-<div class="text-xl font-bold font-['Pacifico'] text-primary mb-4">logo</div>
-<p class="text-sm text-gray-400">IA | Dados & Programação</p>
-<p class="text-sm text-gray-400">Automação com foco em resultado</p>
-</div>
-<div class="grid grid-cols-2 gap-4 mb-6">
-<div>
-<h3 class="text-sm font-medium mb-2">Links Rápidos</h3>
-<ul class="text-xs text-gray-400">
-<li class="mb-1 cursor-pointer">Início</li>
-<li class="mb-1 cursor-pointer">Serviços</li>
-<li class="mb-1 cursor-pointer">Sobre Nós</li>
-<li class="cursor-pointer">Contato</li>
-</ul>
-</div>
-<div>
-<h3 class="text-sm font-medium mb-2">Contato</h3>
-<ul class="text-xs text-gray-400">
-<li class="mb-1 flex items-center">
-<i class="ri-mail-line mr-1"></i>
-contato@iadados.com.br
-</li>
-<li class="flex items-center">
-<i class="ri-phone-line mr-1"></i>
-+55 89 98113-7053
-</li>
-</ul>
-</div>
-</div>
-<div class="text-xs text-gray-500 text-center">
-© 2025 IA | Dados & Programação. Todos os direitos reservados.
-</div>
-</div>
-</footer>
-<script id="navbarInteraction">
-document.addEventListener('DOMContentLoaded', function() {
-const navbarButtons = document.querySelectorAll('nav button');
-navbarButtons.forEach(button => {
-button.addEventListener('click', function() {
-console.log('Botão de navegação clicado');
-});
-});
-});
-</script>
-<script id="socialLinksInteraction">
-document.addEventListener('DOMContentLoaded', function() {
-const socialLinks = document.querySelectorAll('section a[href]');
-socialLinks.forEach(link => {
-link.addEventListener('click', function(e) {
-const href = this.getAttribute('href');
-if (href && href.startsWith('http')) {
-e.preventDefault();
-window.open(href, '_blank');
-}
-});
-});
-});
-</script>
+<body class="bg-white text-gray-900">
+  <!-- Header fixed -->
+  <header
+    class="fixed top-0 left-0 right-0 bg-white shadow-md z-50"
+    style="backdrop-filter: saturate(180%) blur(10px);"
+  >
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 py-3"
+    >
+      <div class="font-semibold text-lg select-none">
+        Erique Ferreira | Análise de Dados
+      </div>
+      <nav>
+        <ul
+          class="flex space-x-6 text-gray-700 font-semibold text-sm select-none"
+        >
+          <li><a href="#inicio" class="hover:text-blue-700">Início</a></li>
+          <li><a href="#servicos" class="hover:text-blue-700">Serviços</a></li>
+          <li><a href="#projetos" class="hover:text-blue-700">Projetos</a></li>
+          <li><a href="#contato" class="hover:text-blue-700">Contato</a></li>
+        </ul>
+      </nav>
+      <div
+        class="flex flex-col sm:flex-row sm:items-center sm:space-x-6 text-gray-600 text-xs select-none"
+      >
+        <div class="flex items-center space-x-2">
+          <i class="far fa-envelope text-blue-700"></i>
+          <a
+            href="mailto:oheriqueferreira@gmail.com"
+            class="hover:underline text-gray-700"
+            >oheriqueferreira@gmail.com</a
+          >
+        </div>
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-mobile-alt text-blue-700"></i>
+          <span>(89) 98811-37053</span>
+        </div>
+      </div>
+      <button
+        class="bg-blue-700 text-white font-semibold rounded-full px-5 py-2 hover:bg-blue-800 transition select-none whitespace-nowrap"
+      >
+        Solicitar Análise Gratuita
+      </button>
+    </div>
+  </header>
+
+  <main class="pt-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+    <!-- Seção 1 - Hero -->
+    <section
+      id="inicio"
+      class="max-w-4xl mx-auto text-center space-y-6 select-none"
+    >
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight">
+        Seus dados têm muito a dizer. Eu te ajudo a entender.
+      </h1>
+      <p class="text-gray-700 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
+        Transformo dados em decisões práticas, com dashboards inteligentes,
+        análises visuais e automações que otimizam seu tempo e resultado.
+      </p>
+      <button
+        class="inline-flex items-center bg-blue-700 text-white font-semibold rounded-full px-7 py-3 hover:bg-blue-800 transition select-none"
+      >
+        👉 Quero uma análise gratuita
+      </button>
+    </section>
+
+    <!-- Seção 2 - Sobre o trabalho -->
+    <section id="servicos" class="max-w-5xl mx-auto space-y-10">
+      <h2 class="text-2xl font-bold text-gray-900 select-none">
+        Como posso te ajudar com dados?
+      </h2>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-gray-800"
+      >
+        <article
+          class="flex flex-col items-center text-center space-y-3 cursor-default select-none"
+        >
+          <div
+            class="bg-blue-700 text-white rounded-full p-4 flex items-center justify-center w-14 h-14"
+          >
+            <i class="fas fa-chart-bar text-2xl"></i>
+          </div>
+          <h3 class="font-semibold text-lg">Dashboards Personalizados</h3>
+          <p class="text-sm leading-tight">
+            Visualize o que importa: vendas, finanças, logística e muito mais.
+          </p>
+        </article>
+        <article
+          class="flex flex-col items-center text-center space-y-3 cursor-default select-none"
+        >
+          <div
+            class="bg-blue-700 text-white rounded-full p-4 flex items-center justify-center w-14 h-14"
+          >
+            <i class="fas fa-puzzle-piece text-2xl"></i>
+          </div>
+          <h3 class="font-semibold text-lg">Automação de Relatórios</h3>
+          <p class="text-sm leading-tight">
+            Relatórios que se atualizam sozinhos? Sim, isso é possível.
+          </p>
+        </article>
+        <article
+          class="flex flex-col items-center text-center space-y-3 cursor-default select-none"
+        >
+          <div
+            class="bg-blue-700 text-white rounded-full p-4 flex items-center justify-center w-14 h-14"
+          >
+            <i class="fas fa-chart-line text-2xl"></i>
+          </div>
+          <h3 class="font-semibold text-lg">Análise de Performance Digital</h3>
+          <p class="text-sm leading-tight">
+            Descubra o que está funcionando (e o que está te custando caro) nas
+            campanhas.
+          </p>
+        </article>
+        <article
+          class="flex flex-col items-center text-center space-y-3 cursor-default select-none"
+        >
+          <div
+            class="bg-blue-700 text-white rounded-full p-4 flex items-center justify-center w-14 h-14"
+          >
+            <i class="fas fa-sync-alt text-2xl"></i>
+          </div>
+          <h3 class="font-semibold text-lg">Processos mais eficientes</h3>
+          <p class="text-sm leading-tight">
+            Soluções simples que economizam tempo e reduzem erros.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Seção 3 - Projetos realizados -->
+    <section id="projetos" class="max-w-5xl mx-auto space-y-10">
+      <h2 class="text-2xl font-bold text-gray-900 select-none">
+        Soluções que já saíram do papel
+      </h2>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-6 text-gray-800"
+      >
+        <article
+          class="flex flex-col items-center text-center space-y-3 cursor-default select-none border border-gray-200 rounded-xl p-5 hover:shadow-lg transition"
+        >
+          <div
+            class="bg-blue-700 text-white rounded-full p-4 flex items-center justify-center w-14 h-14"
+          >
+            <i class="fas fa-user-graduate text-2xl"></i>
+          </div>
+          <h3 class="font-semibold text-lg">Gestão Escolar</h3>
+        </article>
+        <article
+          class="flex flex-col items-center text-center space-y-3 cursor-default select-none border border-gray-200 rounded-xl p-5 hover:shadow-lg transition"
+        >
+          <div
+            class="bg-blue-700 text-white rounded-full p-4 flex items-center justify-center w-14 h-14"
+          >
+            <i class="fas fa-industry text-2xl"></i>
+          </div>
+          <h3 class="font-semibold text-lg">Produção e Logística</h3>
+        </article>
+        <article
+          class="flex flex-col items-center text-center space-y-3 cursor-default select-none border border-gray-200 rounded-xl p-5 hover:shadow-lg transition"
+        >
+          <div
+            class="bg-blue-700 text-white rounded-full p-4 flex items-center justify-center w-14 h-14"
+          >
+            <i class="fas fa-money-bill-wave text-2xl"></i>
+          </div>
+          <h3 class="font-semibold text-lg">Financeiro e Fluxo de Caixa</h3>
+        </article>
+        <article
+          class="flex flex-col items-center text-center space-y-3 cursor-default select-none border border-gray-200 rounded-xl p-5 hover:shadow-lg transition"
+        >
+          <div
+            class="bg-blue-700 text-white rounded-full p-4 flex items-center justify-center w-14 h-14"
+          >
+            <i class="fas fa-chart-line text-2xl"></i>
+          </div>
+          <h3 class="font-semibold text-lg">Vendas e Marketing Digital</h3>
+        </article>
+        <article
+          class="flex flex-col items-center text-center space-y-3 cursor-default select-none border border-gray-200 rounded-xl p-5 hover:shadow-lg transition"
+        >
+          <div
+            class="bg-blue-700 text-white rounded-full p-4 flex items-center justify-center w-14 h-14"
+          >
+            <i class="fas fa-clipboard-list text-2xl"></i>
+          </div>
+          <h3 class="font-semibold text-lg">Gastos Públicos</h3>
+        </article>
+      </div>
+    </section>
+
+    <!-- Seção 4 - CTA -->
+    <section
+      class="max-w-4xl mx-auto bg-blue-700 rounded-3xl p-10 text-white text-center select-none"
+    >
+      <h2 class="text-3xl font-extrabold mb-4">
+        Quer descobrir onde seus dados podem te levar?
+      </h2>
+      <p class="mb-8 max-w-xl mx-auto leading-relaxed">
+        Preencha o formulário abaixo e receba uma análise inicial gratuita do
+        seu cenário. Sem compromisso. Só valor.
+      </p>
+      <button
+        class="inline-flex items-center bg-white text-blue-700 font-semibold rounded-full px-7 py-3 hover:bg-gray-100 transition select-none"
+      >
+        👉 Solicitar agora
+      </button>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer
+    id="contato"
+    class="bg-blue-700 text-white mt-20 py-10 select-none"
+  >
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-4 gap-8"
+    >
+      <div class="flex items-center space-x-2 font-semibold text-lg">
+        <i class="fas fa-chart-bar text-white text-2xl"></i>
+        <span>Erique Ferreira | Análise de Dados</span>
+      </div>
+      <nav class="text-xs space-y-1">
+        <a
+          href="#inicio"
+          class="block hover:underline"
+          >Início</a
+        >
+        <a
+          href="#projetos"
+          class="block hover:underline"
+          >Projetos</a
+        >
+        <a
+          href="https://www.linkedin.com/in/erique-ferreira-6451382a2/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block hover:underline"
+          >LinkedIn</a
+        >
+        <a
+          href="mailto:oheriqueferreira@gmail.com"
+          class="block hover:underline"
+          >E-mail</a
+        >
+      </nav>
+      <div class="text-xs space-y-1">
+        <p>
+          <i class="far fa-envelope mr-2"></i>
+          oheriqueferreira@gmail.com
+        </p>
+        <p>
+          <i class="fas fa-mobile-alt mr-2"></i>
+          (89) 98811-37053
+        </p>
+      </div>
+      <div class="flex space-x-4 text-white text-lg">
+        <a
+          href="https://www.linkedin.com/in/erique-ferreira-6451382a2/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          class="hover:text-gray-300"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <a
+          href="mailto:oheriqueferreira@gmail.com"
+          aria-label="Email"
+          class="hover:text-gray-300"
+          ><i class="fas fa-envelope"></i
+        ></a>
+        <a
+          href="https://github.com/hoerique"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          class="hover:text-gray-300"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://api.whatsapp.com/send/?phone=5589981137053&text&type=phone_number&app_absent=0"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="WhatsApp"
+          class="hover:text-gray-300"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
